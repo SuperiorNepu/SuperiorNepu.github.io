@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="Style.css">
+    </head>
+    <style>
+        body{
+            background-image: url("https://i.imgur.com/YvQCBTh.gif");
+                background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+        }
+        form{
+            margin: 100px;
+        }
+    </style>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;Suggestions</a>
+  <a href="Home.html">Home</a>
+  <a href="Game.html">Game (wip)</a>
+  <a href=Aboutme.html>Contact</a>
+  <a href="Comingsoon.html">Update?</a>
+<a href="Form.html">Survey</a>
+    <a href="Gallery.html">Gallery</a>
+  
+</div>
+    
+    
+    <form action="/action_page.php" >
+  Name: <input type="text" name="usrname" required>
+    Email
+  <input type="submit">
+        <textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+</form>
+    
+    
+    
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+</body>
+</html>

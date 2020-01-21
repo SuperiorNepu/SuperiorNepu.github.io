@@ -1,0 +1,172 @@
+ this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;        
+    }    
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
+
+function updateGameArea() {
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    for (i = 0; i < myObstacles.length; i += 1) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            myGameArea.stop();
+            return;
+        } 
+    }
+    myGameArea.clear();
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].x += -1;
+        myObstacles[i].update();
+    }
+    myGamePiece.newPos();    
+    myGamePiece.update();
+}
+
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PDSkFeMVNFs" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+
+<iframe style=" position: fixed; top:00px; right:00px;" width=420 height=420 src="">
+</iframe>
+
+
+
+
+
+
+
+https://i.imgur.com/YvQCBTh.gif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\
+udio controls autoplay>
+  
+  <source src="Sleep Away.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+
+
+</body>
+</html>
+https://www.youtube.com/watch?v=kL8CyVqzmkc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://thumbs.gfycat.com/SparseShimmeringIlsamochadegu-max-1mb.gif
+
+https://www.youtube.com/watch?v=0FkYKge75ps
+
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/XGSy3_Czz8k">
+</iframe>
+
+https://www.youtube.com/watch?v=bqZ93ood4k0
+https://www.youtube.com/watch?v=1bZtCt_Siro
+shitposting.com
+<tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>

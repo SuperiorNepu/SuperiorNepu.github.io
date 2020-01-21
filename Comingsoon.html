@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+               <link rel="stylesheet" href="Style.css">
+    </head>
+<style>
+    body {
+    font-family: "Lato", sans-serif;
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    
+}
+
+.bgimg {
+    background-image: url('https://ak1.picdn.net/shutterstock/videos/9331721/thumb/2.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    color: aqua;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    color: aqua;
+}
+
+.middle {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:blue;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+</style>
+<body>
+
+    
+
+<div class="bgimg">
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+    <p>If I don't add anything im sorry DX</p>
+  </div>
+    </div>
+    
+
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="Home.html">Home</a>
+  <a href="Game.html">Game (wip)</a>
+  <a href=Aboutme.html>Contact</a>
+  <a href="Comingsoon.html">Updates?</a>
+    </div>
+
+
+<span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776; Updates</span>
+    
+    
+      <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>  
+
+    
+    
+<script>
+    
+    
+}
+
+var countDownDate = new Date("Jan 1, 2018 15:37:25").getTime();
+
+
+var countdownfunction = setInterval(function() {
+
+    
+    var now = new Date().getTime();
+    
+   
+    var distance = countDownDate - now;
+    
+    
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+   
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+     
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "new Installment made :3";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
